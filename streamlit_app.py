@@ -24,7 +24,7 @@ with col1:
     area_terreno = st.number_input(
         "Área del terreno (m²)",
         min_value=0.0,
-        value=4820.0,
+        value=0.0,
         step=100.0,
         format="%.2f",
     )
