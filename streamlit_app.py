@@ -32,7 +32,7 @@ with col1:
     habitaciones = st.number_input(
         "Cantidad total de habitaciones",
         min_value=0,
-        value=35,
+        value=0,
         step=1,
     )
 
@@ -96,7 +96,7 @@ with col1:
     densidad_permitida = st.number_input(
         "Densidad permitida (hab/ha)",
         min_value=0.0,
-        value=75.0,
+        value=0.0,
         step=1.0,
     )
 
@@ -113,7 +113,7 @@ with col3:
     densidad_urbana_permitida = st.number_input(
         "Densidad urbana permitida (hab/ha)",
         min_value=0.0,
-        value=400.0,
+        value=0.0,
         step=1.0,
     )
 
