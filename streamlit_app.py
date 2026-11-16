@@ -105,7 +105,7 @@ with col2:
         "Ocupación permitida (%)",
         min_value=0.0,
         max_value=100.0,
-        value=50.0,
+        value=0.0,
         step=1.0,
     )
 
