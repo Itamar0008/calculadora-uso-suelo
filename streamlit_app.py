@@ -36,23 +36,51 @@ with col1:
         step=1,
     )
 
-    ancho = st.number_input(
-        "Ancho construido (m)",
-        min_value=0.0,
-        value=0.0,
-        step=1.0,
-        format="%.2f",
-    )
-
 with col2:
-    largo = st.number_input(
-        "Largo construido (m)",
+    metodo_area = st.radio(
+        "Método para introducir el área construida",
+        options=[
+            "Calcular con largo y ancho",
+            "Introducir área directamente",
+        ],
+    )
+
+if metodo_area == "Calcular con largo y ancho":
+    col_ancho, col_largo = st.columns(2)
+
+    with col_ancho:
+        ancho = st.number_input(
+            "Ancho construido (m)",
+            min_value=0.0,
+            value=0.0,
+            step=1.0,
+            format="%.2f",
+        )
+
+    with col_largo:
+        largo = st.number_input(
+            "Largo construido (m)",
+            min_value=0.0,
+            value=0.0,
+            step=1.0,
+            format="%.2f",
+        )
+
+    area_construida = ancho * largo
+
+else:
+    area_construida = st.number_input(
+        "Área construida (m²)",
         min_value=0.0,
         value=0.0,
-        step=1.0,
+        step=100.0,
         format="%.2f",
     )
 
+st.metric(
+    "Área construida utilizada",
+    f"{area_construida:,.2f} m²",
+)
 
 st.divider()
 
