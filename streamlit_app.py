@@ -32,7 +32,7 @@ with col1:
     habitaciones = st.number_input(
         "Cantidad total de habitaciones",
         min_value=0,
-        value=0,
+        value=35,
         step=1,
     )
 
@@ -84,6 +84,7 @@ st.metric(
 
 st.divider()
 
+
 # ============================================================
 # 2. PARÁMETROS NORMATIVOS
 # ============================================================
@@ -96,7 +97,7 @@ with col1:
     densidad_permitida = st.number_input(
         "Densidad permitida (hab/ha)",
         min_value=0.0,
-        value=0.0,
+        value=75.0,
         step=1.0,
     )
 
@@ -105,7 +106,7 @@ with col2:
         "Ocupación permitida (%)",
         min_value=0.0,
         max_value=100.0,
-        value=0.0,
+        value=50.0,
         step=1.0,
     )
 
@@ -113,7 +114,7 @@ with col3:
     densidad_urbana_permitida = st.number_input(
         "Densidad urbana permitida (hab/ha)",
         min_value=0.0,
-        value=0.0,
+        value=400.0,
         step=1.0,
     )
 
@@ -305,9 +306,6 @@ else:
 st.divider()
 
 st.subheader("4. Ocupación del suelo")
-
-
-area_construida = ancho * largo
 
 
 if area_terreno > 0:
@@ -520,3 +518,4 @@ st.caption(
     "La matriz de decisiones puede ajustarse "
     "cuando se confirme el procedimiento institucional definitivo."
 )
+
